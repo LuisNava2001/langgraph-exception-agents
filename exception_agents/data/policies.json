@@ -1,0 +1,23 @@
+{
+  "company": "Quellmark Field Service (fictional)",
+  "sla_agreements": {
+    "SLA-PREMIUM": {"name": "Premium", "doc_id": "KA-020", "resolution_hours": {"P1": 4, "P2": 8, "P3": 24}},
+    "SLA-STANDARD": {"name": "Standard", "doc_id": "KA-020", "resolution_hours": {"P1": 8, "P2": 24, "P3": 72}}
+  },
+  "policies": {
+    "POL-EVIDENCE": {"title": "Evidence requirement", "doc_id": "KA-028", "rule": "A recommendation cites at least one retrieved diagnostic article; every claim names its support."},
+    "POL-SAFETY-GAS": {"title": "Gas safety", "doc_id": "KA-026", "hazard": "gas", "certification": "gas_safe"},
+    "POL-SAFETY-ELECTRICAL": {"title": "Electrical isolation", "doc_id": "KA-027", "hazard": "electrical", "certification": "electrical_cert"},
+    "POL-REFRIGERANT": {"title": "Refrigerant handling", "doc_id": "KA-022", "hazard": "refrigerant", "certification": "refrigerant_cert"},
+    "POL-FOOD-SAFETY": {"title": "Cold-chain protection", "doc_id": "KA-025", "mitigation": "Move perishable stock to temporary cold storage until the unit holds temperature (KA-025)."},
+    "POL-SLA-BREACH": {"title": "SLA breach handling", "doc_id": "KA-021", "rule": "A breached request is reported as breached, the customer is notified and a service-credit review is opened."},
+    "POL-COST-APPROVAL": {"title": "Cost approval", "doc_id": "KA-028", "threshold": 2500},
+    "POL-PRIORITY-CONFLICT": {"title": "Competing work orders", "doc_id": "KA-023", "rule": "Higher priority keeps the technician; equal priority goes to the earlier SLA deadline; a full tie goes to a human."},
+    "POL-CONTRADICTION": {"title": "Contradictory reports", "doc_id": "KA-029", "rule": "Conflicting field reports are resolved by a person before dispatch."},
+    "POL-FORBIDDEN-ACTIONS": {"title": "Forbidden actions", "doc_id": "KA-026", "actions": ["RESTART_WITHOUT_INSPECTION", "BYPASS_LOCKOUT", "UNCERTIFIED_REFRIGERANT_HANDLING"]}
+  },
+  "hazard_policies": {"gas": "POL-SAFETY-GAS", "electrical": "POL-SAFETY-ELECTRICAL", "refrigerant": "POL-REFRIGERANT"},
+  "cold_chain_failure_modes": ["compressor_failure", "temperature_alarm", "evaporator_fan_failure"],
+  "review": {"max_revisions": 2, "recursion_limit": 40},
+  "retrieval": {"top_k": 6, "min_score": 4.0}
+}

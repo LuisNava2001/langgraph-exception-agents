@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "langgraph-exception-agents"
+version = "0.1.0"
+description = "Multi-agent exception handling with LangGraph: specialized agents, critic loop, deterministic validation, human review and reproducible evaluation (synthetic data)."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Luis Nava" }]
+# Direct dependencies pinned to the versions verified locally; constraints.txt pins the rest.
+dependencies = [
+    "langgraph==1.2.24",
+    "langgraph-checkpoint-sqlite==3.1.3",
+    "pydantic==2.14.4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.2.0"]
+# LLM Mode only (off by default, NOT TESTED against a real model). Not needed for anything else.
+llm = ["anthropic==2.14.0"]
+
+[project.scripts]
+exception-agents = "exception_agents.cli:main"
+
+[tool.setuptools]
+packages = ["exception_agents", "exception_agents.data", "exception_agents.data.cases", "exception_agents.data.ground_truth"]
+
+[tool.setuptools.package-data]
+"exception_agents.data" = ["*.json"]
+"exception_agents.data.cases" = ["*.json"]
+"exception_agents.data.ground_truth" = ["*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

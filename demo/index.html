@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exception Agents Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="page-header">
+    <div class="wrap">
+      <p class="eyebrow">langgraph-exception-agents · offline demo</p>
+      <h1>Multi-agent exception handling with LangGraph</h1>
+      <p class="lede" id="mode-note"></p>
+      <div class="badges" id="badges"></div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section aria-labelledby="eval-title">
+      <h2 id="eval-title">Evaluation (independent scorer, real runs)</h2>
+      <p class="hint">Deterministic results on designed synthetic cases. They show the workflow does what it was built to do and that the scorer catches regressions; they are not language-model quality metrics.</p>
+      <div class="table-wrap"><table id="metrics"></table></div>
+      <h3>Negative controls</h3>
+      <p class="hint">The same cases run with a safeguard switched off. A useful evaluation must fail these.</p>
+      <div class="table-wrap"><table id="controls"></table></div>
+      <h3>Scorer self-test</h3>
+      <ul class="checks" id="mutations"></ul>
+    </section>
+
+    <section aria-labelledby="cases-title">
+      <h2 id="cases-title">Case traces</h2>
+      <div class="filters" id="filters"></div>
+      <div class="layout">
+        <nav class="case-list" id="case-list" aria-label="Cases"></nav>
+        <article class="case-detail" id="case-detail"></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <p>All companies, people, equipment and documents are synthetic. Demo Mode uses no language model; human reviews in these
+      traces are simulated by each case's scripted reviewer. Reviewer names are labels, not authenticated identities.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

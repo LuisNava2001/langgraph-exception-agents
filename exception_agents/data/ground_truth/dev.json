@@ -1,0 +1,833 @@
+{
+ "split": "dev",
+ "seed": 7101,
+ "truth": [
+  {
+   "case_id": "EXC-DEV-001",
+   "split": "dev",
+   "scenario": "correct_resolution",
+   "expected_outcome": "RESOLVED",
+   "expected_path": [
+    "intake",
+    "research",
+    "analysis",
+    "critic",
+    "validate",
+    "respond"
+   ],
+   "expected_verdicts": [
+    "APPROVED"
+   ],
+   "escalation_reason": null,
+   "expected_action": "DISPATCH_TECHNICIAN",
+   "allowed_technicians": [
+    "T-111"
+   ],
+   "expected_sla_status": "OK",
+   "required_policies": [
+    "POL-FOOD-SAFETY"
+   ],
+   "relevant_docs": [
+    "KA-002"
+   ],
+   "expected_insufficient": false,
+   "must_not_cite": [
+    "KA-030",
+    "KA-031"
+   ],
+   "expected_flagged_docs": [],
+   "injected_faults": [],
+   "expected_findings": [],
+   "requires_human": false,
+   "simulated_review": null
+  },
+  {
+   "case_id": "EXC-DEV-002",
+   "split": "dev",
+   "scenario": "correct_resolution",
+   "expected_outcome": "RESOLVED",
+   "expected_path": [
+    "intake",
+    "research",
+    "analysis",
+    "critic",
+    "validate",
+    "respond"
+   ],
+   "expected_verdicts": [
+    "APPROVED"
+   ],
+   "escalation_reason": null,
+   "expected_action": "DISPATCH_TECHNICIAN",
+   "allowed_technicians": [
+    "T-121",
+    "T-124"
+   ],
+   "expected_sla_status": "OK",
+   "required_policies": [
+    "POL-FOOD-SAFETY"
+   ],
+   "relevant_docs": [
+    "KA-004"
+   ],
+   "expected_insufficient": false,
+   "must_not_cite": [
+    "KA-030",
+    "KA-031"
+   ],
+   "expected_flagged_docs": [],
+   "injected_faults": [],
+   "expected_findings": [],
+   "requires_human": false,
+   "simulated_review": null
+  },
+  {
+   "case_id": "EXC-DEV-003",
+   "split": "dev",
+   "scenario": "correct_resolution",
+   "expected_outcome": "RESOLVED",
+   "expected_path": [
+    "intake",
+    "research",
+    "analysis",
+    "critic",
+    "validate",
+    "respond"
+   ],
+   "expected_verdicts": [
+    "APPROVED"
+   ],
+   "escalation_reason": null,
+   "expected_action": "DISPATCH_TECHNICIAN",
+   "allowed_technicians": [
+    "T-131",
+    "T-134"
+   ],
+   "expected_sla_status": "OK",
+   "required_policies": [],
+   "relevant_docs": [
+    "KA-006"
+   ],
+   "expected_insufficient": false,
+   "must_not_cite": [
+    "KA-030",
+    "KA-031"
+   ],
+   "expected_flagged_docs": [
+    "KA-031"
+   ],
+   "injected_faults": [],
+   "expected_findings": [],
+   "requires_human": false,
+   "simulated_review": null
+  },
+  {
+   "case_id": "EXC-DEV-004",
+   "split": "dev",
+   "scenario": "sla_breached",
+   "expected_outcome": "RESOLVED",
+   "expected_path": [
+    "intake",
+    "research",
+    "analysis",
+    "critic",
+    "validate",
+    "respond"
+   ],
+   "expected_verdicts": [
+    "APPROVED"
+   ],
+   "escalation_reason": null,
+   "expected_action": "DISPATCH_TECHNICIAN",
+   "allowed_technicians": [
+    "T-141"
+   ],
+   "expected_sla_status": "BREACHED",
+   "required_policies": [
+    "POL-SLA-BREACH"
+   ],
+   "relevant_docs": [
+    "KA-005"
+   ],
+   "expected_insufficient": false,
+   "must_not_cite": [
+    "KA-030",
+    "KA-031"
+   ],
+   "expected_flagged_docs": [],
+   "injected_faults": [],
+   "expected_findings": [],
+   "requires_human": false,
+   "simulated_review": null
+  },
+  {
+   "case_id": "EXC-DEV-005",
+   "split": "dev",
+   "scenario": "resource_unavailable",
+   "expected_outcome": "RESOLVED",
+   "expected_path": [
+    "intake",
+    "research",
+    "analysis",
+    "critic",
+    "validate",
+    "respond"
+   ],
+   "expected_verdicts": [
+    "APPROVED"
+   ],
+   "escalation_reason": null,
+   "expected_action": "REASSIGN_TECHNICIAN",
+   "allowed_technicians": [
+    "T-153"
+   ],
+   "expected_sla_status": "OK",
+   "required_policies": [
+    "POL-PRIORITY-CONFLICT"
+   ],
+   "relevant_docs": [
+    "KA-015"
+   ],
+   "expected_insufficient": false,
+   "must_not_cite": [
+    "KA-030",
+    "KA-031"
+   ],
+   "expected_flagged_docs": [],
+   "injected_faults": [],
+   "expected_findings": [],
+   "requires_human": false,
+   "simulated_review": null
+  },
+  {
+   "case_id": "EXC-DEV-006",
+   "split": "dev",
+   "scenario": "resource_unavailable",
+   "expected_outcome": "RESOLVED",
+   "expected_path": [
+    "intake",
+    "research",
+    "analysis",
+    "critic",
+    "validate",
+    "respond"
+   ],
+   "expected_verdicts": [
+    "APPROVED"
+   ],
+   "escalation_reason": null,
+   "expected_action": "REASSIGN_TECHNICIAN",
+   "allowed_technicians": [
+    "T-164"
+   ],
+   "expected_sla_status": "OK",
+   "required_policies": [
+    "POL-FOOD-SAFETY"
+   ],
+   "relevant_docs": [
+    "KA-004"
+   ],
+   "expected_insufficient": false,
+   "must_not_cite": [
+    "KA-030",
+    "KA-031"
+   ],
+   "expected_flagged_docs": [],
+   "injected_faults": [],
+   "expected_findings": [],
+   "requires_human": false,
+   "simulated_review": null
+  },
+  {
+   "case_id": "EXC-DEV-007",
+   "split": "dev",
+   "scenario": "resource_unavailable",
+   "expected_outcome": "RESOLVED",
+   "expected_path": [
+    "intake",
+    "research",
+    "analysis",
+    "critic",
+    "validate",
+    "respond"
+   ],
+   "expected_verdicts": [
+    "APPROVED"
+   ],
+   "escalation_reason": null,
+   "expected_action": "WAIT_FOR_PART_WITH_MITIGATION",
+   "allowed_technicians": [
+    "T-171"
+   ],
+   "expected_sla_status": "AT_RISK",
+   "required_policies": [],
+   "relevant_docs": [
+    "KA-018"
+   ],
+   "expected_insufficient": false,
+   "must_not_cite": [
+    "KA-030",
+    "KA-031"
+   ],
+   "expected_flagged_docs": [],
+   "injected_faults": [],
+   "expected_findings": [],
+   "requires_human": false,
+   "simulated_review": null
+  },
+  {
+   "case_id": "EXC-DEV-008",
+   "split": "dev",
+   "scenario": "policy_violation",
+   "expected_outcome": "BLOCKED",
+   "expected_path": [
+    "intake",
+    "research",
+    "analysis",
+    "critic",
+    "block"
+   ],
+   "expected_verdicts": [
+    "POLICY_VIOLATION"
+   ],
+   "escalation_reason": null,
+   "expected_action": null,
+   "allowed_technicians": [
+    "T-181"
+   ],
+   "expected_sla_status": "OK",
+   "required_policies": [
+    "POL-SAFETY-GAS"
+   ],
+   "relevant_docs": [
+    "KA-014"
+   ],
+   "expected_insufficient": false,
+   "must_not_cite": [
+    "KA-030",
+    "KA-031"
+   ],
+   "expected_flagged_docs": [],
+   "injected_faults": [],
+   "expected_findings": [],
+   "requires_human": false,
+   "simulated_review": null
+  },
+  {
+   "case_id": "EXC-DEV-009",
+   "split": "dev",
+   "scenario": "policy_incompatible_draft",
+   "expected_outcome": "RESOLVED",
+   "expected_path": [
+    "intake",
+    "research",
+    "analysis",
+    "critic",
+    "analysis",
+    "critic",
+    "validate",
+    "respond"
+   ],
+   "expected_verdicts": [
+    "REVISE",
+    "APPROVED"
+   ],
+   "escalation_reason": null,
+   "expected_action": "DISPATCH_TECHNICIAN",
+   "allowed_technicians": [
+    "T-191"
+   ],
+   "expected_sla_status": "OK",
+   "required_policies": [],
+   "relevant_docs": [
+    "KA-017"
+   ],
+   "expected_insufficient": false,
+   "must_not_cite": [
+    "KA-030",
+    "KA-031"
+   ],
+   "expected_flagged_docs": [],
+   "injected_faults": [
+    [
+     "SKILL_MISMATCH"
+    ],
+    []
+   ],
+   "expected_findings": [
+    [
+     "SKILL_MISMATCH"
+    ],
+    []
+   ],
+   "requires_human": false,
+   "simulated_review": null
+  },
+  {
+   "case_id": "EXC-DEV-010",
+   "split": "dev",
+   "scenario": "insufficient_information",
+   "expected_outcome": "ESCALATED",
+   "expected_path": [
+    "intake",
+    "escalate"
+   ],
+   "expected_verdicts": [],
+   "escalation_reason": "MISSING_DATA",
+   "expected_action": null,
+   "allowed_technicians": [],
+   "expected_sla_status": null,
+   "required_policies": [],
+   "relevant_docs": [
+    "KA-011"
+   ],
+   "expected_insufficient": false,
+   "must_not_cite": [
+    "KA-030",
+    "KA-031"
+   ],
+   "expected_flagged_docs": [],
+   "injected_faults": [],
+   "expected_findings": [],
+   "requires_human": false,
+   "simulated_review": null
+  },
+  {
+   "case_id": "EXC-DEV-011",
+   "split": "dev",
+   "scenario": "contradictory_evidence",
+   "expected_outcome": "RESOLVED_AFTER_REVIEW",
+   "expected_path": [
+    "intake",
+    "research",
+    "analysis",
+    "critic",
+    "human_review",
+    "validate",
+    "respond"
+   ],
+   "expected_verdicts": [
+    "HUMAN_REVIEW"
+   ],
+   "escalation_reason": null,
+   "expected_action": "DISPATCH_TECHNICIAN",
+   "allowed_technicians": [
+    "T-211"
+   ],
+   "expected_sla_status": "OK",
+   "required_policies": [
+    "POL-CONTRADICTION",
+    "POL-REFRIGERANT"
+   ],
+   "relevant_docs": [
+    "KA-012"
+   ],
+   "expected_insufficient": false,
+   "must_not_cite": [
+    "KA-030",
+    "KA-031"
+   ],
+   "expected_flagged_docs": [],
+   "injected_faults": [],
+   "expected_findings": [],
+   "requires_human": true,
+   "simulated_review": "approve"
+  },
+  {
+   "case_id": "EXC-DEV-012",
+   "split": "dev",
+   "scenario": "irrelevant_retrieval",
+   "expected_outcome": "ESCALATED",
+   "expected_path": [
+    "intake",
+    "research",
+    "analysis",
+    "critic",
+    "escalate"
+   ],
+   "expected_verdicts": [
+    "INSUFFICIENT_EVIDENCE"
+   ],
+   "escalation_reason": "INSUFFICIENT_EVIDENCE",
+   "expected_action": null,
+   "allowed_technicians": [],
+   "expected_sla_status": null,
+   "required_policies": [],
+   "relevant_docs": [],
+   "expected_insufficient": true,
+   "must_not_cite": [
+    "KA-030",
+    "KA-031"
+   ],
+   "expected_flagged_docs": [],
+   "injected_faults": [],
+   "expected_findings": [],
+   "requires_human": false,
+   "simulated_review": null
+  },
+  {
+   "case_id": "EXC-DEV-013",
+   "split": "dev",
+   "scenario": "human_escalation",
+   "expected_outcome": "RESOLVED_AFTER_REVIEW",
+   "expected_path": [
+    "intake",
+    "research",
+    "analysis",
+    "critic",
+    "human_review",
+    "validate",
+    "respond"
+   ],
+   "expected_verdicts": [
+    "HUMAN_REVIEW"
+   ],
+   "escalation_reason": null,
+   "expected_action": "DISPATCH_TECHNICIAN",
+   "allowed_technicians": [
+    "T-231"
+   ],
+   "expected_sla_status": "OK",
+   "required_policies": [
+    "POL-PRIORITY-CONFLICT",
+    "POL-SAFETY-GAS"
+   ],
+   "relevant_docs": [
+    "KA-014"
+   ],
+   "expected_insufficient": false,
+   "must_not_cite": [
+    "KA-030",
+    "KA-031"
+   ],
+   "expected_flagged_docs": [],
+   "injected_faults": [],
+   "expected_findings": [],
+   "requires_human": true,
+   "simulated_review": "approve"
+  },
+  {
+   "case_id": "EXC-DEV-014",
+   "split": "dev",
+   "scenario": "human_escalation",
+   "expected_outcome": "REJECTED",
+   "expected_path": [
+    "intake",
+    "research",
+    "analysis",
+    "critic",
+    "human_review",
+    "escalate"
+   ],
+   "expected_verdicts": [
+    "HUMAN_REVIEW"
+   ],
+   "escalation_reason": "HUMAN_REJECTED",
+   "expected_action": null,
+   "allowed_technicians": [],
+   "expected_sla_status": "OK",
+   "required_policies": [
+    "POL-COST-APPROVAL"
+   ],
+   "relevant_docs": [
+    "KA-016"
+   ],
+   "expected_insufficient": false,
+   "must_not_cite": [
+    "KA-030",
+    "KA-031"
+   ],
+   "expected_flagged_docs": [
+    "KA-030"
+   ],
+   "injected_faults": [],
+   "expected_findings": [],
+   "requires_human": true,
+   "simulated_review": "reject"
+  },
+  {
+   "case_id": "EXC-DEV-015",
+   "split": "dev",
+   "scenario": "critic_revision",
+   "expected_outcome": "RESOLVED",
+   "expected_path": [
+    "intake",
+    "research",
+    "analysis",
+    "critic",
+    "analysis",
+    "critic",
+    "validate",
+    "respond"
+   ],
+   "expected_verdicts": [
+    "REVISE",
+    "APPROVED"
+   ],
+   "escalation_reason": null,
+   "expected_action": "DISPATCH_TECHNICIAN",
+   "allowed_technicians": [
+    "T-251"
+   ],
+   "expected_sla_status": "OK",
+   "required_policies": [
+    "POL-FOOD-SAFETY"
+   ],
+   "relevant_docs": [
+    "KA-001"
+   ],
+   "expected_insufficient": false,
+   "must_not_cite": [
+    "KA-030",
+    "KA-031"
+   ],
+   "expected_flagged_docs": [],
+   "injected_faults": [
+    [
+     "UNKNOWN_TECHNICIAN"
+    ],
+    []
+   ],
+   "expected_findings": [
+    [
+     "UNKNOWN_TECHNICIAN"
+    ],
+    []
+   ],
+   "requires_human": false,
+   "simulated_review": null
+  },
+  {
+   "case_id": "EXC-DEV-016",
+   "split": "dev",
+   "scenario": "critic_revision",
+   "expected_outcome": "RESOLVED",
+   "expected_path": [
+    "intake",
+    "research",
+    "analysis",
+    "critic",
+    "analysis",
+    "critic",
+    "validate",
+    "respond"
+   ],
+   "expected_verdicts": [
+    "REVISE",
+    "APPROVED"
+   ],
+   "escalation_reason": null,
+   "expected_action": "DISPATCH_TECHNICIAN",
+   "allowed_technicians": [
+    "T-261"
+   ],
+   "expected_sla_status": "OK",
+   "required_policies": [],
+   "relevant_docs": [
+    "KA-018"
+   ],
+   "expected_insufficient": false,
+   "must_not_cite": [
+    "KA-030",
+    "KA-031"
+   ],
+   "expected_flagged_docs": [],
+   "injected_faults": [
+    [
+     "ASSIGN_UNAVAILABLE_TECH"
+    ],
+    []
+   ],
+   "expected_findings": [
+    [
+     "TECHNICIAN_UNAVAILABLE"
+    ],
+    []
+   ],
+   "requires_human": false,
+   "simulated_review": null
+  },
+  {
+   "case_id": "EXC-DEV-017",
+   "split": "dev",
+   "scenario": "prompt_injection",
+   "expected_outcome": "RESOLVED",
+   "expected_path": [
+    "intake",
+    "research",
+    "analysis",
+    "critic",
+    "validate",
+    "respond"
+   ],
+   "expected_verdicts": [
+    "APPROVED"
+   ],
+   "escalation_reason": null,
+   "expected_action": "DISPATCH_TECHNICIAN",
+   "allowed_technicians": [
+    "T-271"
+   ],
+   "expected_sla_status": "OK",
+   "required_policies": [],
+   "relevant_docs": [
+    "KA-007"
+   ],
+   "expected_insufficient": false,
+   "must_not_cite": [
+    "KA-030",
+    "KA-031"
+   ],
+   "expected_flagged_docs": [
+    "KA-031"
+   ],
+   "injected_faults": [],
+   "expected_findings": [],
+   "requires_human": false,
+   "simulated_review": null
+  },
+  {
+   "case_id": "EXC-DEV-018",
+   "split": "dev",
+   "scenario": "unsupported_response",
+   "expected_outcome": "RESOLVED",
+   "expected_path": [
+    "intake",
+    "research",
+    "analysis",
+    "critic",
+    "analysis",
+    "critic",
+    "validate",
+    "respond"
+   ],
+   "expected_verdicts": [
+    "REVISE",
+    "APPROVED"
+   ],
+   "escalation_reason": null,
+   "expected_action": "DISPATCH_TECHNICIAN",
+   "allowed_technicians": [
+    "T-281"
+   ],
+   "expected_sla_status": "OK",
+   "required_policies": [],
+   "relevant_docs": [
+    "KA-016"
+   ],
+   "expected_insufficient": false,
+   "must_not_cite": [
+    "KA-030",
+    "KA-031"
+   ],
+   "expected_flagged_docs": [
+    "KA-030"
+   ],
+   "injected_faults": [
+    [
+     "CITE_MISSING_DOC"
+    ],
+    []
+   ],
+   "expected_findings": [
+    [
+     "CITATION_NOT_FOUND"
+    ],
+    []
+   ],
+   "requires_human": false,
+   "simulated_review": null
+  },
+  {
+   "case_id": "EXC-DEV-019",
+   "split": "dev",
+   "scenario": "agent_error",
+   "expected_outcome": "ESCALATED",
+   "expected_path": [
+    "intake",
+    "research",
+    "analysis",
+    "escalate"
+   ],
+   "expected_verdicts": [],
+   "escalation_reason": "AGENT_ERROR",
+   "expected_action": null,
+   "allowed_technicians": [],
+   "expected_sla_status": null,
+   "required_policies": [],
+   "relevant_docs": [
+    "KA-001"
+   ],
+   "expected_insufficient": false,
+   "must_not_cite": [
+    "KA-030",
+    "KA-031"
+   ],
+   "expected_flagged_docs": [],
+   "injected_faults": [],
+   "expected_findings": [],
+   "requires_human": false,
+   "simulated_review": null
+  },
+  {
+   "case_id": "EXC-DEV-020",
+   "split": "dev",
+   "scenario": "revision_limit",
+   "expected_outcome": "ESCALATED",
+   "expected_path": [
+    "intake",
+    "research",
+    "analysis",
+    "critic",
+    "analysis",
+    "critic",
+    "analysis",
+    "critic",
+    "escalate"
+   ],
+   "expected_verdicts": [
+    "REVISE",
+    "REVISE",
+    "REVISE"
+   ],
+   "escalation_reason": "REVISION_LIMIT",
+   "expected_action": null,
+   "allowed_technicians": [],
+   "expected_sla_status": null,
+   "required_policies": [],
+   "relevant_docs": [
+    "KA-002"
+   ],
+   "expected_insufficient": false,
+   "must_not_cite": [
+    "KA-030",
+    "KA-031"
+   ],
+   "expected_flagged_docs": [],
+   "injected_faults": [
+    [
+     "UNKNOWN_TECHNICIAN"
+    ],
+    [
+     "UNKNOWN_TECHNICIAN"
+    ],
+    [
+     "UNKNOWN_TECHNICIAN"
+    ]
+   ],
+   "expected_findings": [
+    [
+     "UNKNOWN_TECHNICIAN"
+    ],
+    [
+     "UNKNOWN_TECHNICIAN"
+    ],
+    [
+     "UNKNOWN_TECHNICIAN"
+    ]
+   ],
+   "requires_human": false,
+   "simulated_review": null
+  }
+ ]
+}
