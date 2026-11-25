@@ -1,8 +1,19 @@
-# langgraph-exception-agents
+# LangGraph Exception Agents
 
 A multi-agent system built on a real LangGraph `StateGraph` that analyses operational exceptions at a fictional
-field-service company. Specialized agents share a typed state, a critic sends weak drafts back, deterministic
-validation has the final word, and a human can be asked through a LangGraph interrupt. It runs offline by default.
+field-service company. Specialized agent nodes share a typed state, conditional edges route each case, a critic
+sends weak drafts back, deterministic validation has the final word, and a human can be asked through a LangGraph
+interrupt and resumed from a SQLite checkpoint. An evaluation harness with negative controls checks all of it.
+
+![Offline demo: the critic rejects the first draft (unknown technician) and the graph revises it before validation](docs/images/demo-case-trace.png)
+
+**Stack:** Python 3.11+ · LangGraph 1.2.24 · SQLite checkpoints · Pydantic v2 · BM25 lexical retrieval · pytest ·
+GitHub Actions (Ubuntu and Windows, Python 3.11 to 3.13). **Try it:** [Quick Start](#12-quick-start) or open
+`demo/index.html` offline.
+
+> **Demo scope.** Demo Mode uses a deterministic scripted reasoner and no language model; LLM Mode is implemented
+> but has no results against a real model. Retrieval is lexical BM25, not vector search. The 57 evaluation cases are
+> synthetic and designed, and the 37-case holdout is reserved, not blind.
 
 ## 1. Project Overview
 
@@ -123,7 +134,7 @@ the initial state, the path through the graph, retrieved and quarantined evidenc
 findings, the validation checks, the (simulated) reviewer, the final decision and the case's evaluation. All of it
 comes from `demo/data.js`, generated from real graph runs.
 
-![Demo page](docs/images/demo.png)
+![Evaluation tables and negative controls in the demo](docs/images/demo-evaluation.png)
 
 ## 12. Quick Start
 
@@ -195,7 +206,10 @@ Inventory: [docs/testing.md](docs/testing.md).
 
 ## 17. AI-Assisted Development Disclosure
 
-This repository was built with an AI coding assistant (Claude) working under my direction. I defined the scope,
-constraints and acceptance criteria, reviewed the design and results, and decided what to publish. The assistant
-wrote most of the code, tests and documentation. All data is synthetic, and every result quoted here comes from
-running the code in this repository; nothing is taken from academic coursework or from any employer.
+I designed and directed this project; it was implemented with substantial help from Claude Code (Anthropic). I
+defined the problem, scope, constraints and acceptance criteria, reviewed the design and the results, and decided
+what to publish. Most of the code, tests and documentation were generated with the assistant under that direction,
+which is why the commits carry a `Co-Authored-By` trailer. Results quoted here come from the automated tests,
+evaluations and CI runs in this repository, on synthetic data. They show that the code behaves as described under
+those conditions, not that it is ready for production, and nothing this README marks as simulated, planned or not
+tested has been validated.
