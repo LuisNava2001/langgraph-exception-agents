@@ -18,7 +18,8 @@
 
 * All data is synthetic: the company, customers, venues, technicians, equipment, documents and policies are
   invented. Names are composed from generic word lists.
-* No corporate system, endpoint, credential, document or prompt was used, and no academic material was reused.
+* The documents, policies and prompts were written for this repository. No external system, endpoint or credential
+  is used.
 * KA-030 and KA-031 contain injected instructions on purpose; they are labelled as test documents in the knowledge
   base file.
 

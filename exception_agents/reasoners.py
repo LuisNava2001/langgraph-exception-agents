@@ -227,7 +227,7 @@ class AnthropicReasoner:
             except ImportError as exc:
                 raise LLMConfigError("LLM Mode needs the optional SDK: pip install -e \".[llm]\"") from exc
             if not os.environ.get("ANTHROPIC_API_KEY"):
-                raise LLMConfigError("LLM Mode needs ANTHROPIC_API_KEY (a personal key; never a corporate one)")
+                raise LLMConfigError("LLM Mode needs the ANTHROPIC_API_KEY environment variable (your own test key)")
             client = anthropic.Anthropic()
         self.client = client
         self.model = model or os.environ.get("EXCEPTION_AGENTS_MODEL", "claude-opus-5-5")

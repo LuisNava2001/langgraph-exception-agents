@@ -23,7 +23,7 @@ validation findings. Implementations:
 
 ```bash
 python -m pip install -e ".[llm]"              # optional SDK (anthropic==2.14.0); not installed for the MVP
-export ANTHROPIC_API_KEY=...                   # a personal key; never a corporate account
+export ANTHROPIC_API_KEY=...                   # your own test key, read from the environment only
 python -m exception_agents run EXC-DEV-001 --mode llm
 ```
 
